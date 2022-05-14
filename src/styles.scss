@@ -1,1 +1,50 @@
-/* You can add global styles to this file, and also import other style files */
+// Estilos globales
+*,
+*::before,
+*::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+};
+
+$red1: #C21E1E;
+app-home {
+
+  scroll-behavior: smooth !important;
+}
+
+html {
+  scroll-behavior: smooth !important;
+}
+@font-face {
+  font-family: Brock;
+  src: url(assets/fonts/BrockScript.ttf);
+  // Principal1
+};
+
+@font-face {
+  font-family: Minimalist;
+  src: url(assets/fonts/Minimalist.otf);
+  // Principal2
+};
+
+@font-face {
+  font-family: Inria;
+  src: url(assets/fonts/InriaSans-Regular.ttf);
+  // Secundaria1
+};
+@font-face {
+  font-family: Zen;
+  src: url(assets/fonts/ZenLoop-Regular.ttf);
+  // Secundaria2;
+};
+
+// Clases específicas
+.hr1{
+  display: block;
+  width: 50%;
+  margin: 40px auto;
+  height: 4px;
+  background-color: $red1;
+  border: none;
+}

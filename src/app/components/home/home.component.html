@@ -1,0 +1,338 @@
+<!-- CARROUSEL -->
+<div  *ngIf="images && images.length > 0" class="carrousel-container">
+  <img  *ngFor="let image of images; let i = index"
+  [src]="image.imageSrc" [alt]="image.imageAlt"
+  [ngClass]="{'image-active': selectedIndex === i }"
+  class="fade"
+  >
+  <div class="carrousel-info">
+    <p>Bienvenido a nuestro sitio oficial</p>
+    <h1>Restaurante Colibríes</h1>
+    <p>Descubre nuestra deliciosa comida en el menú</p>
+    <!-- <a href="#ola">Habilidades</a> -->
+  </div>
+
+
+  <div   *ngIf="indicators" class="carrousel-dot_container">
+    <span  *ngFor="let dot of images; let i = index" class="dot" [ngClass]="{'active': selectedIndex === i}"
+      (click)="selectImage(i)"
+    >
+
+    </span>
+  </div>
+
+  <div *ngIf="controls" class="btn-carrousel btn-prev">
+    <i class='bx bx-skip-previous' (click)="onPrevClick()" ></i>
+    <!-- <i class='bx bx-skip-next' ></i> -->
+  </div>
+  <div *ngIf="controls" class="btn-carrousel btn-next">
+    <!-- <i class='bx bx-skip-previous' (click)="onPrevClick()" ></i> -->
+    <i class='bx bx-skip-next' (click)="onNextClick()" ></i>
+
+  </div>
+
+</div>
+
+<!-- FIN DE CARROUSEL -->
+<hr class="hr1">
+
+<!-- Bienvenida -->
+<section class="bienvenida">
+  <div class="bienvenida__img">
+    <!-- Imágen de la bienvenida -->
+  </div>
+  <div class="bienvenida__info">
+    <h1>Bienvenid@</h1>
+    <p>Este es el sitio oficial de Restaurante Colibries. Nos comprometemos con ofreces siempre la comida de mejor calidad y estar en constante cambio gracias a las opiniones de nuestros comensales.
+      Consulta nuestro menú en la siguiente sección.
+      <br>
+    </p>
+    <p>
+      Puedes mandar comentarios o sugerencias a: restaurante.colibries@gmail.com
+    </p>
+  </div>
+</section>
+
+<!-- Fin de la bienvenida -->
+
+<hr class="hr1">
+<!-- Sección de desayunos -->
+<section class="menu">
+  <h1 class="menu__subtitle">-- Desayunos --</h1>
+  <div class="desayunos desayunos1">
+            <div class="desayunos__img  desayunos__img-1 ">
+      <!-- Imágen de desayunos 1 -->
+            </div>
+            <ul class="desayunos__huevos">
+              <h4>Huevos</h4>
+              <li><p>Huevos divorciados salsa roja y verde</p> <strong>$85</strong></li>
+              <li><p>Huevo revuelto condimentado con frijoles</p> <strong>$80</strong></li>
+              <li><p>Huevos rancheros</p> <strong>$85</strong></li>
+              <li><p>Estrellados con tocino</p> <strong>$75</strong></li>
+              <li><p>Omelette 1 con jutiomate y perejil</p> <strong>$80</strong></li>
+              <li><p>Omelette 2 con champiñones a la mexicana </p> <strong>$95</strong></li>
+              <li><p>Omelettte 3 con queso manchego y pollo</p> <strong>$100</strong></li>
+            </ul>
+            <ul class="desayunos__carnes">
+              <h4>Chilaquiles</h4>
+              <li><p>Cecina acompañada de frijoles o chilaquiles </p> <strong>$85</strong></li>
+              <li><p>Arrachera acompañada de frijoles o chilaquiles</p> <strong>$90</strong></li>
+              <li><p>Pollo asado acompañado de lechuga con jitomate</p> <strong>$70</strong></li>
+              <li><p>Pollo empanizado con frijoles y lechuga</p> <strong>$80</strong></li>
+              <li><p>Res empeanizada con frijoles y lechuga</p> <strong>$85</strong></li>
+              <li><p>Carne de puerco enchilada verde con pasta</p> <strong>$95</strong></li>
+              <li><p>Carne de puerco enchilada roja con frijoles y arroz </p> <strong>$95</strong></li>
+              <li><p>Carne de venado (especial)</p> <strong>$120</strong></li>
+            </ul>
+            <div class="menu__img-secundary">
+              <div class="desayunos__img  desayunos__img-2">
+                <!-- Imágen de desayunos 2 -->
+                      </div>
+                      <div class="desayunos__img desayunos__img-3 ">
+                        <!-- Imágen de desayunos 3 -->
+                              </div>
+            </div>
+            <ul class="desayunos__chilaquiles">
+              <h4>Otros</h4>
+              <li><p>Chilaquiles verdes con huevo</p> <strong>$75</strong></li>
+              <li><p>Chilaquiles rojos con huevo </p> <strong>$75</strong></li>
+              <li><p>Chilaquiles mixtos con frijoles</p> <strong>$85</strong></li>
+              <li><p>Chilaquiles en salsa teo con frijoles </p> <strong>$80</strong></li>
+              <li><p>Chilaquiles verdes con queso manchego y cebolla criolla</p> <strong>$95</strong></li>
+              <li><p>Chilaquiles rojos con guacamole y trozo de pollo</p> <strong>$110</strong></li>
+              <li><p>Chilaquiles en salsa de chile ancho con frijoles</p> <strong>$90</strong></li>
+            </ul>
+  </div>
+  <!-- SECCIÓN DE COMIDAS -->
+  <h1 class="menu__subtitle">-- Comidas --</h1>
+  <div class="desayunos">
+            <div class="desayunos__img  comida__img-1">
+      <!-- Imágen de desayunos 1 -->
+            </div>
+            <ul class="desayunos__huevos">
+              <h4>Carnes</h4>
+              <li><p>Pollo empanizado con frijoles y lechuga</p> <strong>$80</strong></li>
+              <li><p>Res empanizada con frijoles y ezpinaca</p> <strong>$85</strong></li>
+              <li><p>Arrachera con frijoles y lechuga</p> <strong>$90</strong></li>
+              <li><p>Alambre al pastor con piña y cebolla</p> <strong>$100</strong></li>
+              <li><p>Alambre al pastor con arrachera y champiñón</p> <strong>$75</strong></li>
+              <li><p>Mojarra al mojo de ajo</p> <strong>$85</strong></li>
+              <li><p>Tilapia en mantequilla</p> <strong>$70</strong></li>
+              <li><p>Carne de puerco enchilada con frijoles y arroz</p> <strong>$90</strong></li>
+            </ul>
+            <ul class="desayunos__carnes">
+              <h4>Ensaladas</h4>
+              <li><p>Ensalada César</p> <strong>$60</strong></li>
+              <li><p>Ensalada con atún y kale condimentada</p> <strong>$55</strong></li>
+              <li><p>Ensalada de mango con atún y coco fresco</p> <strong>$55</strong></li>
+              <li><p>Ensalada mexicana con pollo</p> <strong>$45</strong></li>
+              <li><p>Ensalada verde con mango y arándanos</p> <strong>$45</strong></li>
+              <li><p>Ensalada griega con pasta</p> <strong>$67</strong></li>
+              <li><p>Ensalada de verduras rostizadas con cacahuate</p> <strong>$40</strong></li>
+              <li><p>Ensalada de betabel rostizado y toronja</p> <strong>$40</strong></li>
+            </ul>
+            <div class="menu__img-secundary">
+              <div class="desayunos__img  comida__img-2">
+                <!-- Imágen de desayunos 2 -->
+                      </div>
+                      <div class="desayunos__img  comida__img-3">
+                        <!-- Imágen de desayunos 3 -->
+                              </div>
+            </div>
+            <ul class="desayunos__chilaquiles">
+              <h4>Guisados</h4>
+              <li><p>Especial del día</p> <strong>$90</strong></li>
+              <li><p>Pollo con mole</p> <strong>$85</strong></li>
+              <li><p>Enchiladas suizas</p> <strong>$80</strong></li>
+              <li><p>Enchiladas (rojas o verdes)</p> <strong>$80</strong></li>
+              <li><p>Champiñones a la mexicana</p> <strong>$65</strong></li>
+              <li><p>Calabazitas a la mexicana</p> <strong>$75</strong></li>
+              <li><p>Cevivhe a la veracruzana</p> <strong>$90</strong></li>
+              <li><p>Chile en nogada</p> <strong>$100</strong></li>
+            </ul>
+  </div>
+ <!-- Sección de Bebidas -->
+ <h1 class="menu__subtitle">-- Bebidas --</h1>
+ <div class="desayunos">
+           <div class="desayunos__img bebidas__img-1 ">
+     <!-- Imágen de desayunos 1 -->
+           </div>
+           <ul class="desayunos__huevos">
+             <h4>Para temprano</h4>
+             <li><p>Café de olla</p> <strong>$30</strong></li>
+             <li><p>Café expreso</p> <strong>$30</strong></li>
+             <li><p>Café americano</p> <strong>$35</strong></li>
+             <li><p>Mocca</p> <strong>$28</strong></li>
+             <li><p>Café Irlandés</p> <strong>$40</strong></li>
+             <li><p>Leche</p> <strong>$20</strong></li>
+             <li><p>Chocolate caliente</p> <strong>$25</strong></li>
+             <li><p>Atole de arroz</p> <strong>$30</strong></li>
+           </ul>
+           <ul class="desayunos__carnes">
+             <h4>Aguas de sabor</h4>
+             <li><p>Especial del día</p> <strong>$25</strong></li>
+             <li><p>Agua de limón con chía</p> <strong>$28</strong></li>
+             <li><p>Agua de naranja con limón</p> <strong>$28</strong></li>
+             <li><p>Agua de tamarindo</p> <strong>$20</strong></li>
+             <li><p>Agua de jamaica</p> <strong>$24</strong></li>
+             <li><p>Agua de horchata</p> <strong>$28</strong></li>
+             <li><p>Agua de guayaba</p> <strong>$20</strong></li>
+           </ul>
+           <div class="menu__img-secundary">
+             <div class="desayunos__img  bebidas__img-2">
+               <!-- Imágen de desayunos 2 -->
+                     </div>
+                     <div class="desayunos__img  bebidas__img-3">
+                       <!-- Imágen de desayunos 3 -->
+                             </div>
+           </div>
+           <ul class="desayunos__chilaquiles">
+             <h4>Malteadas</h4>
+             <li><p>Malteada de fresa con plátano</p> <strong>$50</strong></li>
+             <li><p>Malteada de zarzamora con queso y leche</p> <strong>$45</strong></li>
+             <li><p>Malteada de mango con fresa</p> <strong>$48</strong></li>
+             <li><p>Malteada de plátano</p> <strong>$40</strong></li>
+             <li><p>Malteada de maracuya</p> <strong>$38</strong></li>
+             <li><p>Malteada de chocolate con plátano</p> <strong>$50</strong></li>
+             <li><p>Malteada de chocolate con fresa</p> <strong>$55</strong></li>
+             <li><p>Malteada de manzana</p> <strong>$45</strong></li>
+           </ul>
+ </div>
+ <!-- Sección de postres -->
+ <h1 class="menu__subtitle">-- Postres --</h1>
+ <div class="desayunos">
+           <div class="desayunos__img postres__img-1 ">
+     <!-- Imágen de desayunos 1 -->
+           </div>
+           <ul class="desayunos__huevos">
+             <h4>Pays</h4>
+             <li><p>Pay de queso</p> <strong>$40</strong></li>
+             <li><p>Pay de queso con zarzamora</p> <strong>$36</strong></li>
+             <li><p>Pay de queso con piña</p> <strong>$36</strong></li>
+             <li><p>Pay de piña</p> <strong>$38</strong></li>
+             <li><p>Pay de arandano</p> <strong>$30</strong></li>
+             <li><p>Pay de limón</p> <strong>$30</strong></li>
+             <li><p>Pay de mazana</p> <strong>$30</strong></li>
+           </ul>
+           <ul class="desayunos__carnes">
+             <h4>Gelatina</h4>
+             <li><p>Gelatina de naranja</p> <strong>$30</strong></li>
+             <li><p>Gelatina de mango</p> <strong>$30</strong></li>
+             <li><p>Gelatina de piña</p> <strong>$28</strong></li>
+             <li><p>Flan napilitano</p> <strong>$32</strong></li>
+             <li><p>Flan de fresa</p> <strong>$35</strong></li>
+             <li><p>Gelatina de queso con uva</p> <strong>$25</strong></li>
+             <li><p>Gelatina de queso con frambuesa</p> <strong>$35</strong></li>
+           </ul>
+           <div class="menu__img-secundary">
+             <div class="desayunos__img  postres__img-2">
+               <!-- Imágen de desayunos 2 -->
+                     </div>
+                     <div class="desayunos__img  postres__img-3">
+                       <!-- Imágen de desayunos 3 -->
+                             </div>
+           </div>
+           <ul class="desayunos__chilaquiles">
+             <h4>Helado</h4>
+             <li><p>Helado de limón</p> <strong>$22</strong></li>
+             <li><p>Helado de café</p> <strong>$20</strong></li>
+             <li><p>Helado de vainilla</p> <strong>$22</strong></li>
+             <li><p>Helado de queso con zarzamora</p> <strong>$22</strong></li>
+             <li><p>Helado de moka</p> <strong>$20</strong></li>
+             <li><p>Helado napolitano</p> <strong>$22</strong></li>
+             <li><p>Helado de fresa</p> <strong>$22</strong></li>
+           </ul>
+ </div>
+</section>
+
+<hr class="hr1">
+
+
+<h1 class="services__title">Te ofrecemos</h1>
+<section class="services">
+  <div class="service">
+    <div class="service__container">
+      <i class='bx bxs-building-house'></i>
+    </div>
+    <p>Pedidos a domicilio por didifood o rappi</p>
+  </div>
+   <div class="service">
+    <div class="service__container">
+      <i class='bx bxs-bowl-rice'></i>
+    </div>
+    <p>La más alta calidad de alimentos</p>
+   </div>
+  <div class="service">
+    <div class="service__container">
+      <i class='bx bxs-face'></i>
+    </div>
+    <p>El mejor servicio siempre a su disposición</p>
+  </div>
+</section>
+
+<hr class="hr1">
+<!-- Carrousel 2 -->
+
+<div class="carrousel-container__2" *ngIf="imagesCarrousel2 && imagesCarrousel2.length > 0">
+  <div class="carrousel2" *ngFor="let image2 of imagesCarrousel2; let i = index">
+    <img [src] ="image2.imageSrc" [alt]="image2.imageAlt"
+    [ngClass]="{'image-active': selectedIndex2 === i}"
+    class="fade"
+    >
+    <h1 [ngClass]="{'info-active': selectedIndex2 == i}">{{image2.imageTitle}}</h1>
+    <p [ngClass]="{'info-active': selectedIndex2 == i}">{{image2.imageInfo}}</p>
+  </div>
+
+  <div *ngIf="indicators" class="carrousel-dot__container2">
+    <span *ngFor="let dot of imagesCarrousel2; let i = index"
+      class="dot"
+      [ngClass]="{'active': selectedIndex2 === i}"
+      (click)="selectImage2(i)"
+    ></span>
+  </div>
+
+
+  <div *ngIf="controls" class="btn-carrousel2 btn-prev2">
+    <i class='bx bx-skip-previous' (click)="onPrevClick2()" ></i>
+    <!-- <i class='bx bx-skip-next' ></i> -->
+  </div>
+  <div *ngIf="controls" class="btn-carrousel2 btn-next2">
+    <!-- <i class='bx bx-skip-previous' (click)="onPrevClick()" ></i> -->
+    <i class='bx bx-skip-next' (click)="onNextClick2()" ></i>
+
+  </div>
+
+</div>
+
+<hr class="hr1">
+
+
+<!-- Footer -->
+<footer class="home__footer">
+  <div class="footer__info">
+    <div class="footer__contact">
+      <div class="socialmedia">
+        <h2>Nuestras redes</h2>
+        <div class="socialmedia__container">
+          <i class='bx bxl-instagram-alt'></i>
+          <i class='bx bxl-tiktok' ></i>
+          <i class='bx bxl-whatsapp' ></i>
+          <i class='bx bxl-facebook-circle'></i>
+        </div>
+      </div>
+      <hr class="hr1">
+      <div class="footer__contact-extra">
+        <h2>Contáctanos</h2>
+        <p>+52 1 777 132 89 45</p>
+        <p>restaurante.colibries@gmail.com</p>
+        <p>Encuentranos en didifood como ResColibries</p>
+      </div>
+    </div>
+    <div class="footer__location">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15095.921118916282!2d-99.232941!3d18.932267!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xef3b4cfad00fd4ee!2sRestaurante%20Vivaldi%20y%20Sal%C3%B3n%20de%20Eventos%20Stravaganza!5e0!3m2!1ses!2smx!4v1652559409698!5m2!1ses!2smx" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+  </div>
+  <div class="footer__copy">
+    Restaurante Colibries oficial 2022 &copy;; Todos los derechos reservados
+  </div>
+</footer>
